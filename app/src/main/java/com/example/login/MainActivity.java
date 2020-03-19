@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         goToActivitySignUp();
     }
     public void goToActivityLogin (){
-        Intent intent = new Intent(this, Main2Activity.class);
+        Intent intent = new Intent(this, SignIn.class);
         startActivity(intent);
     }
     public void goToActivitySignUp (){
-        Intent intent = new Intent(this, Main2Activity.class);
+        Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
 }
