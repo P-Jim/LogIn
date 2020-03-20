@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SignUp extends AppCompatActivity {
 
     @Override
@@ -19,7 +22,10 @@ public class SignUp extends AppCompatActivity {
     public void clickFunction (View view){
         EditText myText = (EditText) findViewById(R.id.editText);
         String str = myText.getText().toString();
-        boolean Validity = str.matches("^.*[^a-zA-Z ]{2,20}.*$");
+        //boolean Validity = str.matches("^.*[^a-zA-Z ].*$");
+        Pattern p = Pattern.compile("^[ A-Za-z]+$");
+        Matcher m = p.matcher(str);
+        boolean Validity = m.matches();
         if (Validity){
             goToNext(str);
         }
@@ -31,7 +37,7 @@ public class SignUp extends AppCompatActivity {
 
     public void goToNext (String s){
         Intent intent = new Intent(this, SignUp2.class);
-        intent.putExtra("message", s);
+        intent.putExtra("name", s);
         startActivity(intent);
     }
 }
