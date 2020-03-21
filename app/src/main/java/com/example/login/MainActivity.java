@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         goToActivitySignUp();
     }
     public void goToActivityLogin (){
-        Intent intent = new Intent(this, SignIn.class);
+        //Intent intent = new Intent(this, SignIn.class);
+        Intent intent = new Intent(this, AccountPage.class);
         startActivity(intent);
     }
     public void goToActivitySignUp (){

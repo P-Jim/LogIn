@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Change Password">
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:icon="@drawable/ic_launcher_background"
+            android:dialogTitle="Enter a new password"
+            android:dialogMessage="Please make sure the password is secure"
+            android:title="Enter New Password"
+            android:inputType="textPassword"
+            />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_2"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:icon="@drawable/ic_launcher_background"
+            android:dialogTitle="Confirm the new password"
+            android:dialogMessage="Please make sure the password is secure"
+            android:dependency="edit_text_preference_1"
+            android:title="Retype New Password"
+            android:inputType="textPassword"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Privacy">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Activity Status"
+            android:summary="Turn location services on or off"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Personal Information">
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:icon="@drawable/ic_launcher_background"
+            android:key="edit_text_preference_3"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dialogTitle="Enter a new phone number"
+            android:title="Edit phone number"
+            android:summary="Change phone number associated with account"
+            android:inputType="phone"/>
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:icon="@drawable/ic_launcher_background"
+            android:key="edit_text_preference_4"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit name"
+            android:dialogTitle="Edit your profile name"
+            android:summary="Change profile name"
+            android:inputType="textPersonName"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Account">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:key="list_preference_1"
+            android:title="Logout"
+            android:summary="Log out of your account"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
