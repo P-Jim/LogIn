@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="Change Password">
         <EditTextPreference
-            android:defaultValue="Default value"
+            android:defaultValue=""
             android:key="edit_text_preference_1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
@@ -13,7 +13,7 @@
             android:inputType="textPassword"
             />
         <EditTextPreference
-            android:defaultValue="Default value"
+            android:defaultValue=""
             android:key="edit_text_preference_2"
             android:selectAllOnFocus="true"
             android:singleLine="true"
@@ -27,7 +27,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Privacy">
         <SwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="switch_preference_1"
             android:icon="@drawable/ic_launcher_background"
             android:title="Activity Status"
@@ -35,7 +35,17 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Personal Information">
         <EditTextPreference
-            android:defaultValue="Default value"
+            android:defaultValue=""
+            android:dialogTitle="Edit your profile name"
+            android:icon="@drawable/ic_launcher_background"
+            android:inputType="textPersonName"
+            android:key="edit_text_preference_4"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="Change profile name"
+            android:title="Edit name" />
+        <EditTextPreference
+            android:defaultValue=""
             android:icon="@drawable/ic_launcher_background"
             android:key="edit_text_preference_3"
             android:selectAllOnFocus="true"
@@ -43,17 +53,26 @@
             android:dialogTitle="Enter a new phone number"
             android:title="Edit phone number"
             android:summary="Change phone number associated with account"
-            android:inputType="phone"/>
+            android:inputType="text"/>
         <EditTextPreference
             android:defaultValue="Default value"
             android:icon="@drawable/ic_launcher_background"
-            android:key="edit_text_preference_4"
+            android:key="edit_text_preference_6"
+            android:dialogTitle="Enter a new location"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="Edit name"
-            android:dialogTitle="Edit your profile name"
-            android:summary="Change profile name"
-            android:inputType="textPersonName"/>
+            android:title="Edit Location"
+            android:summary="Change the location that is displayed to other users"
+            />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="edit_text_preference_5"
+            android:icon="@drawable/ic_launcher_background"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:title="Edit Description"
+            android:dialogTitle="Edit your profile description"
+            android:summary="Update your profile description"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="Account">
 
